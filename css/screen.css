@@ -179,29 +179,20 @@ a:focus {
   color: #3e3ea8;
 }
 
-/*
-    Component: Logo
-    ---
-    Website main logo
-*/
-
-.c-logo {
-    height: 32px;
-}
-
-.c-logo__symbol {
-    height: 100%;
-}
-
-@media (min-width: 768px) {
-  .c-logo__symbol {
-      height: 40px;
-  }
-}
-
 /*------------------------------------*\
   #OBJECTS
 \*------------------------------------*/
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+  list-style-type: none;
+  padding: 0;
+}
 
 /*
     Objects: Row
@@ -366,6 +357,103 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header__nav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .c-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .c-header__nav {
+    display: block;
+  }
+}
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+  height: 32px;
+}
+
+.c-logo__symbol {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .c-logo__symbol {
+    height: 40px;
+  }
+}
+/*
+    Component: Nav
+    ---
+    Main navigation of the site
+*/
+
+.c-nav {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.c-nav--meta {
+  font-size: 16px;
+}
+
+.c-nav__link {
+  text-decoration: none;
+  font-weight: 400;
+  padding: 8px 0;
+  display: block;
+}
+
+.c-nav__link--meta,
+.c-nav__link--meta:visited,
+.c-nav__link--meta:active {
+  color: #6c6c75;
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+  color: #202024;
+}
+
+.is-selected .c-nav__link,
+.c-nav__link:hover,
+.c-nav__link:focus {
+  color: #5051db;
+}
+
+@media (min-width: 768px) {
+  .c-nav__list {
+    display: flex;
+    gap: 16px;
+  }
+
+  .c-nav__link {
+    padding: 16px 8px 0 8px;
+  }
+
+  /* .header_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  } */
+}
 
 /*------------------------------------*\
   #UTILITIES
